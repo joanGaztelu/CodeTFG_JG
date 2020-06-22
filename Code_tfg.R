@@ -7,7 +7,7 @@ library(ggsignif);library(ggplot2);library(plyr);
 #Print subject residual plot
 #sound options: "Flat" or "Loom"
 analysis_plots<-function(sound){
-  setwd("directory to store the plots")
+  #setwd("directory to store the plots")
   
   #unique times in all dataset
   times<-c(unique((ST$Time)))
@@ -84,7 +84,6 @@ analysis_plots<-function(sound){
 mean_plots("Flat")
 mean_plots<-function(sound){
   #setwd("set working directory")
-  setwd("/Volumes/PANDORA/Courses/PR/PLOTS/Paleta1/means")
   times<-c(unique((ST$Time)))
   fit$pxqnts[10:12]<-fit$xqnts[10:12]
   sequence<-c(seq(0.1, 0.9, 0.1))
@@ -130,7 +129,7 @@ mean_plots<-function(sound){
 
 #Plots for the parameters
 par_plot<- function(sound){
-  setwd("/Volumes/PANDORA/Courses/PR/PLOTS/Paleta1/parameters")
+  #setwd("Working directory")
   
   times<-c("300","800","1500","2200","2700")
   soundf<-c("Flat","Flat","Flat","Flat","Flat")
